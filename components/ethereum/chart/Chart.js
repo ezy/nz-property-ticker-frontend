@@ -143,7 +143,7 @@ class Chart extends React.Component {
               tickLength={0}
               tickValues={yVolumeScale.ticks(5)}
               tickLabelComponent={
-                <text dx="0.33em" fill="white" fontSize={8} fillOpacity={0.8} />
+                <text dx="0.33em" fill="#B400FF" fontSize={8} fillOpacity={1} />
               }
             />
           </Group>
@@ -158,7 +158,7 @@ class Chart extends React.Component {
             tickStroke="white"
             tickLabelComponent={
               <text
-                fill="white"
+                fill="#BFB1C4"
                 textAnchor="end"
                 dx="-.33em"
                 dy="-.33em"
@@ -204,8 +204,8 @@ class Chart extends React.Component {
             tickFormat={formatTime}
             tickLabelComponent={
               <text
-                fill="white"
-                fillOpacity={0.5}
+                fill="#BFB1C4"
+                fillOpacity={1}
                 textAnchor="middle"
                 fontSize={10}
               />

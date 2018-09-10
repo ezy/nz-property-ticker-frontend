@@ -95,6 +95,9 @@ class Ethereum extends React.Component {
         <style jsx>{`
           @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
+          body {
+            background-color: #24062F;
+          }
           .ethereum {
             display: flex;
             flex-direction: column;
