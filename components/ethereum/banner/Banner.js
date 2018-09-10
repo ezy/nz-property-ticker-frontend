@@ -4,7 +4,7 @@ const Logo = withParentSize(function({ parentWidth, parentHeight }) {
   const margin = {
     top: 5,
     bottom: 5,
-    right: 22,
+    right: 5,
     left: 22
   };
   const width = parentWidth - margin.left - margin.right;

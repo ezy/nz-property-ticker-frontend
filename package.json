@@ -1,14 +1,14 @@
 {
-  "name": "@hshoff/funcodetime",
+  "name": "nz-property-ticker",
   "version": "1.0.0",
-  "description": "FunTimeCode episodes ",
+  "description": "Indexing NZ property data from around the web",
   "main": "index.js",
   "scripts": {
     "dev": "next",
     "build": "next build",
     "start": "next start"
   },
-  "author": "@hshoff",
+  "author": "@ezy",
   "license": "MIT",
   "dependencies": {
     "@vx/axis": "0.0.134",

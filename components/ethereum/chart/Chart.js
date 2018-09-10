@@ -80,22 +80,15 @@ class Chart extends React.Component {
           <Group top={margin.top} left={margin.left}>
             <LinearGradient
               id="gradient"
-              from="#FF9A8B"
-              to="#FF6A88"
-              vertical={false}
+              from="#1D0029"
+              to="#36004D"
             />
             <rect width={width} height={height} fill="url(#gradient)" />
             <GridRows
               width={width}
               height={height}
               scale={yScale}
-              stroke="rgba(255,255,255,0.2)"
-            />
-            <GridColumns
-              width={width}
-              height={height - margin.bottom}
-              scale={timeScale}
-              stroke="rgba(255,255,255,0.1)"
+              stroke="rgba(87,0,122,1)"
             />
           </Group>
           {buckets.map(b => {
@@ -106,7 +99,7 @@ class Chart extends React.Component {
                   x2={xScale(b.closeTime) + xScale.bandwidth() / 2}
                   y1={yScale(b.highPrice)}
                   y2={b.hollow ? yScale(b.closePrice) : yScale(b.lowPrice)}
-                  stroke="white"
+                  stroke={b.hollow ? '#57FF00' : '#FF0089'}
                   strokeWidth={1}
                 />
                 <line
@@ -114,7 +107,7 @@ class Chart extends React.Component {
                   x2={xScale(b.closeTime) + xScale.bandwidth() / 2}
                   y1={b.hollow ? yScale(b.openPrice) : yScale(b.closePrice)}
                   y2={yScale(b.lowPrice)}
-                  stroke="white"
+                  stroke={b.hollow ? '#57FF00' : '#FF0089'}
                   strokeWidth={1}
                 />
                 <Bar
@@ -125,8 +118,8 @@ class Chart extends React.Component {
                       ? yScale(b.openPrice) - yScale(b.closePrice)
                       : yScale(b.closePrice) - yScale(b.openPrice)
                   }
-                  fill={b.hollow ? 'transparent' : 'white'}
-                  stroke={b.hollow ? 'white' : 'transparent'}
+                  fill={b.hollow ? '#57FF00' : '#FF0089'}
+                  stroke={b.hollow ? '#57FF00' : '#FF0089'}
                   strokeWidth={1}
                   x={xScale(b.closeTime)}
                   y={b.hollow ? yScale(b.closePrice) : yScale(b.openPrice)}

@@ -93,7 +93,7 @@ class Ethereum extends React.Component {
         </div>
         <Footer />
         <style jsx>{`
-          @import url('https://fonts.googleapis.com/css?family=Droid+Sans+Mono');
+          @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
           .ethereum {
             display: flex;
@@ -105,13 +105,12 @@ class Ethereum extends React.Component {
             bottom: 0;
             justify-content: center;
             align-items: center;
-            background-color: #f6f0f2;
-            font-family: 'Droid Sans Mono', monospace;
+            font-family: 'Open Sans', monospace;
           }
           .container {
             height: 75vh;
             width: 90vw;
-            background-color: #ecc3c7;
+            background-color: #1D0029;
             position: relative;
           }
           .chart-container {
