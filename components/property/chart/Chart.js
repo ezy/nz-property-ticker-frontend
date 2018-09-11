@@ -97,16 +97,16 @@ class Chart extends React.Component {
                 <line
                   x1={xScale(b.closeTime) + xScale.bandwidth() / 2}
                   x2={xScale(b.closeTime) + xScale.bandwidth() / 2}
-                  y1={yScale(b.highPrice)}
-                  y2={b.hollow ? yScale(b.closePrice) : yScale(b.lowPrice)}
+                  y1={yScale(b.maxPrice)}
+                  y2={b.hollow ? yScale(b.lowerQuart) : yScale(b.minPrice)}
                   stroke={b.hollow ? '#57FF00' : '#FF0089'}
                   strokeWidth={1}
                 />
                 <line
                   x1={xScale(b.closeTime) + xScale.bandwidth() / 2}
                   x2={xScale(b.closeTime) + xScale.bandwidth() / 2}
-                  y1={b.hollow ? yScale(b.openPrice) : yScale(b.closePrice)}
-                  y2={yScale(b.lowPrice)}
+                  y1={b.hollow ? yScale(b.upperQuart) : yScale(b.lowerQuart)}
+                  y2={yScale(b.minPrice)}
                   stroke={b.hollow ? '#57FF00' : '#FF0089'}
                   strokeWidth={1}
                 />
@@ -115,14 +115,14 @@ class Chart extends React.Component {
                   width={xScale.bandwidth()}
                   height={
                     b.hollow
-                      ? yScale(b.openPrice) - yScale(b.closePrice)
-                      : yScale(b.closePrice) - yScale(b.openPrice)
+                      ? yScale(b.upperQuart) - yScale(b.lowerQuart)
+                      : yScale(b.lowerQuart) - yScale(b.upperQuart)
                   }
                   fill={b.hollow ? '#57FF00' : '#FF0089'}
                   stroke={b.hollow ? '#57FF00' : '#FF0089'}
                   strokeWidth={1}
                   x={xScale(b.closeTime)}
-                  y={b.hollow ? yScale(b.closePrice) : yScale(b.openPrice)}
+                  y={b.hollow ? yScale(b.lowerQuart) : yScale(b.upperQuart)}
                 />
                 <Volume
                   top={height - margin.bottom - volumeHeight}

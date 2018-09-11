@@ -19,32 +19,32 @@ export default function Details({
         color: '#BFB1C4',
         transform: xScale(bucket.closeTime) > halfway ? 'translate(-104%)' : ''
       }}
-      top={yScale(bucket.lowPrice)}
+      top={yScale(bucket.minPrice)}
       left={left}
     >
       <div className="details">
         <div className="detail">
           <div className="tooltip-label">max</div>
           <div>
-            {formatPrice(bucket.highPrice)}
+            {formatPrice(bucket.maxPrice)}
           </div>
         </div>
         <div className="detail">
           <div className="tooltip-label">upper</div>
           <div>
-            {formatPrice(bucket.openPrice)}
+            {formatPrice(bucket.upperQuart)}
           </div>
         </div>
         <div className="detail">
           <div className="tooltip-label">lower</div>
           <div>
-            {formatPrice(bucket.closePrice)}
+            {formatPrice(bucket.lowerQuart)}
           </div>
         </div>
         <div className="detail">
           <div className="tooltip-label">min</div>
           <div>
-            {formatPrice(bucket.lowPrice)}
+            {formatPrice(bucket.minPrice)}
           </div>
         </div>
         <div className="detail">

@@ -36,20 +36,20 @@ class Property extends React.Component {
       .map(b => {
         const [
           closeTime,
-          openPrice,
-          highPrice,
-          lowPrice,
-          closePrice,
+          upperQuart,
+          maxPrice,
+          minPrice,
+          lowerQuart,
           volume
         ] = b;
         return {
           closeTime: unix(closeTime),
-          openPrice,
-          highPrice,
-          lowPrice,
-          closePrice,
+          upperQuart,
+          maxPrice,
+          minPrice,
+          lowerQuart,
           volume,
-          hollow: closePrice > openPrice
+          hollow: lowerQuart > upperQuart
         };
       })
       .reverse()
@@ -61,10 +61,10 @@ class Property extends React.Component {
     console.log(sortedBuckets);
 
     const maxHighPrice = Math.max(
-      ...buckets.map(b => Math.max(...[b.highPrice, b.openPrice, b.closePrice]))
+      ...buckets.map(b => Math.max(...[b.maxPrice, b.upperQuart, b.lowerQuart]))
     );
     const minLowPrice = Math.min(
-      ...buckets.map(b => Math.min(...[b.lowPrice, b.openPrice, b.closePrice]))
+      ...buckets.map(b => Math.min(...[b.minPrice, b.upperQuart, b.lowerQuart]))
     );
     const maxVolume = Math.max(...buckets.map(b => b.volume));
 
