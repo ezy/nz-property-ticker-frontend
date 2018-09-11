@@ -1,7 +1,7 @@
 import 'isomorphic-fetch';
-import { Banner, Chart, Footer } from '../components/ethereum';
+import { Banner, Chart, Footer } from '../components/property';
 
-class Ethereum extends React.Component {
+class Property extends React.Component {
   static async getInitialProps() {
     const res = await fetch(
       `https://api.cryptowat.ch/markets/gdax/ethusd/ohlc?period=180`
@@ -58,6 +58,7 @@ class Ethereum extends React.Component {
     const sortedBuckets = buckets.sort((a, b) => {
       return a.closeTime - b.closeTime;
     });
+    console.log(sortedBuckets);
 
     const maxHighPrice = Math.max(
       ...buckets.map(b => Math.max(...[b.highPrice, b.openPrice, b.closePrice]))
@@ -71,7 +72,7 @@ class Ethereum extends React.Component {
     const end = sortedBuckets[sortedBuckets.length - 1].closeTime;
 
     return (
-      <div className="ethereum">
+      <div className="property">
         <div className="container">
           <div className="chart-container">
             <Chart
@@ -98,7 +99,7 @@ class Ethereum extends React.Component {
           body {
             background-color: #24062F;
           }
-          .ethereum {
+          .property {
             display: flex;
             flex-direction: column;
             position: absolute;
@@ -132,4 +133,4 @@ class Ethereum extends React.Component {
   }
 }
 
-export default Ethereum;
+export default Property;
