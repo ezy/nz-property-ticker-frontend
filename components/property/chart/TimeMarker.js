@@ -8,7 +8,7 @@ export default function TimeMarker({ top, time, formatTime, xScale }) {
         borderRadius: 0,
         boxShadow: '0 1px 10px rgba(0,0,0,0.1)',
         backgroundColor: '#27273f',
-        color: 'white',
+        color: '#BFB1C4',
         fontSize: '11px'
       }}
       top={top}

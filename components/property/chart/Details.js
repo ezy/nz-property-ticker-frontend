@@ -16,7 +16,7 @@ export default function Details({
         borderRadius: 0,
         boxShadow: '0 1px 10px rgba(0,0,0,0.1)',
         backgroundColor: '#27273f',
-        color: 'white',
+        color: '#BFB1C4',
         transform: xScale(bucket.closeTime) > halfway ? 'translate(-104%)' : ''
       }}
       top={yScale(bucket.lowPrice)}
@@ -24,31 +24,31 @@ export default function Details({
     >
       <div className="details">
         <div className="detail">
-          <div className="tooltip-label">high</div>
+          <div className="tooltip-label">max</div>
           <div>
             {formatPrice(bucket.highPrice)}
           </div>
         </div>
         <div className="detail">
-          <div className="tooltip-label">low</div>
-          <div>
-            {formatPrice(bucket.lowPrice)}
-          </div>
-        </div>
-        <div className="detail">
-          <div className="tooltip-label">open</div>
+          <div className="tooltip-label">upper</div>
           <div>
             {formatPrice(bucket.openPrice)}
           </div>
         </div>
         <div className="detail">
-          <div className="tooltip-label">close</div>
+          <div className="tooltip-label">lower</div>
           <div>
             {formatPrice(bucket.closePrice)}
           </div>
         </div>
         <div className="detail">
-          <div className="tooltip-label">volume</div>
+          <div className="tooltip-label">min</div>
+          <div>
+            {formatPrice(bucket.lowPrice)}
+          </div>
+        </div>
+        <div className="detail">
+          <div className="tooltip-label">sample</div>
           <div>
             {formatNumber(bucket.volume)}
           </div>
@@ -65,7 +65,7 @@ export default function Details({
         .tooltip-label {
           font-size: 9px;
           font-weight: 900;
-          color: #5473b8;
+          color: #85738C;
         }
       `}</style>
     </Tooltip>

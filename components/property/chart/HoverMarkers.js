@@ -40,7 +40,7 @@ export default function HoverMarker({
           20},L${width - 55 - 10},${yPoint},${width - 55},${yPoint - 11}`}
         fill="#27273f"
       />
-      <text fontSize={11} x={width - 50} y={yPoint} dy="0.3em" fill="white">
+      <text fontSize={11} x={width - 50} y={yPoint} dy="0.3em" fill="#BFB1C4">
         {formatPrice(yScale.invert(yPoint))}
       </text>
     </g>
