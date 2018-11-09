@@ -29,6 +29,7 @@ class Property extends React.Component {
 
   render() {
     const { data } = this.props;
+    console.log(data);
 
     const unix = d => new Date(d * 1000);
 
@@ -58,7 +59,6 @@ class Property extends React.Component {
     const sortedBuckets = buckets.sort((a, b) => {
       return a.closeTime - b.closeTime;
     });
-    console.log(sortedBuckets);
 
     const maxHighPrice = Math.max(
       ...buckets.map(b => Math.max(...[b.maxPrice, b.upperQuart, b.lowerQuart]))
