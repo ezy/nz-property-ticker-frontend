@@ -4,7 +4,7 @@
 
 ```bash
 git clone https://github.com/ezy/nz-property-ticker-frontend.git
-cd tm-property-ticker
+cd nz-property-ticker-frontend
 yarn
 yarn dev
 
