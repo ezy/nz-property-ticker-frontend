@@ -10,3 +10,9 @@ yarn dev
 
 # => localhost:3000/
 ```
+## Design
+
+Inline-style: 
+![Property Ticker design](https://github.com/ezy/nz-property-ticker-frontend/blob/master/design-files/nz-property-ticker.png)
+
+
