@@ -12,7 +12,6 @@ yarn dev
 ```
 ## Design
 
-Inline-style: 
 ![Property Ticker design](https://github.com/ezy/nz-property-ticker-frontend/blob/master/design-files/nz-property-ticker.png)
 
 
